@@ -22,7 +22,7 @@ protocol CalculadoraProtocol {
     func suma(num1: Int, num2: Int) -> Int
     func resta(num1: Int, num2: Int) -> Int
     
-    //func division
+    func division(num1: Int, num2:Int) -> Float
     //func multiplicacion
     //func modulo()
 
