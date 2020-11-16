@@ -23,8 +23,9 @@ protocol CalculadoraProtocol {
     func resta(num1: Int, num2: Int) -> Int
     
     func division(num1: Int, num2:Int) -> Float
-    //func multiplicacion
-    //func modulo()
+    func multiplicacion(num1: Int, num2: Int)-> Float
+    func modulo(num1: Int)-> Float
+    func isOdd(num1: Int)-> Bool
 
 }
 
