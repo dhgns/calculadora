@@ -8,10 +8,21 @@
 import UIKit
 
 class CalculadoraController: UIViewController {
+    
+    var network: NetworkProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        network = NetworkManager()
+        
+    }
+    
+    func fetchPets(){
+        
+        self.network!.doRequest()
+        
     }
     
 
@@ -26,6 +37,8 @@ protocol CalculadoraProtocol {
     func multiplicacion(num1: Int, num2: Int)-> Float
     func modulo(num1: Int)-> Float
     func isOdd(num1: Int)-> Bool
+    
+    func fetchPets()
 
 }
 
@@ -34,12 +47,13 @@ extension CalculadoraController: CalculadoraProtocol {
     
     func suma(num1: Int, num2: Int) -> Int {
         
-        return 0
+        return num1 + num2
+        
     }
     
     func resta(num1: Int, num2: Int) -> Int {
-        
-        return 0
+
+        return num1 - num2
 
     }
     
